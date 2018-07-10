@@ -1,0 +1,21 @@
+{
+  "name": "db-connect-app",
+  "version": "1.0.0",
+  "scripts": {
+    "client": "cd client && npm run start",
+    "server": "py server.py",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "nodemon": "^1.17.5"
+  },
+  "devDependencies": {
+    "concurrently": "^3.6.0"
+  },
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
