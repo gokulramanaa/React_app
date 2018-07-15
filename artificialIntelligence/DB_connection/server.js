@@ -13,7 +13,7 @@ var connection = mysql.createConnection({
 
 app.get('/api/hello', (req, res) => {
   // res.send({ express: 'Hello From Gokul' });
-  connection.query('select * from host_summary', (error, results,fields) =>{
+  connection.query('select * from metrics', (error, results,fields) =>{
       if (error) throw error;
       res.send(JSON.stringify([results,fields]));
   });
