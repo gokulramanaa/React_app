@@ -16,7 +16,7 @@ app.get('/api/hello', (req, res) => {
   connection.query('select * from metrics;', (error, results,fields) =>{
       if (error) throw error;
       // console.log(results);
-      res.send(JSON.stringify(results));
+      res.send(JSON.stringify([results,fields]));
       // res.send({express: results[0].solution});
   });
 });
